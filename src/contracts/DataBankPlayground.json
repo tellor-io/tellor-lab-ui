@@ -1,0 +1,145 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "DataBankPlayground",
+  "sourceName": "contracts/testing/DataBankPlayground.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        { "indexed": true, "internalType": "bytes32", "name": "queryId", "type": "bytes32" },
+        {
+          "components": [
+            { "internalType": "bytes32", "name": "queryId", "type": "bytes32" },
+            {
+              "components": [
+                { "internalType": "bytes", "name": "value", "type": "bytes" },
+                { "internalType": "uint256", "name": "timestamp", "type": "uint256" },
+                { "internalType": "uint256", "name": "aggregatePower", "type": "uint256" },
+                { "internalType": "uint256", "name": "previousTimestamp", "type": "uint256" },
+                { "internalType": "uint256", "name": "nextTimestamp", "type": "uint256" },
+                { "internalType": "uint256", "name": "lastConsensusTimestamp", "type": "uint256" }
+              ],
+              "internalType": "struct ReportData",
+              "name": "report",
+              "type": "tuple"
+            },
+            { "internalType": "uint256", "name": "attestationTimestamp", "type": "uint256" }
+          ],
+          "indexed": false,
+          "internalType": "struct OracleAttestationData",
+          "name": "attestData",
+          "type": "tuple"
+        }
+      ],
+      "name": "OracleUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        { "internalType": "bytes32", "name": "", "type": "bytes32" },
+        { "internalType": "uint256", "name": "", "type": "uint256" }
+      ],
+      "name": "data",
+      "outputs": [
+        { "internalType": "bytes", "name": "value", "type": "bytes" },
+        { "internalType": "uint256", "name": "power", "type": "uint256" },
+        { "internalType": "uint256", "name": "aggregateTimestamp", "type": "uint256" },
+        { "internalType": "uint256", "name": "attestationTimestamp", "type": "uint256" },
+        { "internalType": "uint256", "name": "relayTimestamp", "type": "uint256" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "bytes32", "name": "_queryId", "type": "bytes32" },
+        { "internalType": "uint256", "name": "_index", "type": "uint256" }
+      ],
+      "name": "getAggregateByIndex",
+      "outputs": [
+        {
+          "components": [
+            { "internalType": "bytes", "name": "value", "type": "bytes" },
+            { "internalType": "uint256", "name": "power", "type": "uint256" },
+            { "internalType": "uint256", "name": "aggregateTimestamp", "type": "uint256" },
+            { "internalType": "uint256", "name": "attestationTimestamp", "type": "uint256" },
+            { "internalType": "uint256", "name": "relayTimestamp", "type": "uint256" }
+          ],
+          "internalType": "struct DataBankPlayground.AggregateData",
+          "name": "_aggregateData",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [ { "internalType": "bytes32", "name": "_queryId", "type": "bytes32" } ],
+      "name": "getAggregateValueCount",
+      "outputs": [ { "internalType": "uint256", "name": "", "type": "uint256" } ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [ { "internalType": "bytes32", "name": "_queryId", "type": "bytes32" } ],
+      "name": "getCurrentAggregateData",
+      "outputs": [
+        {
+          "components": [
+            { "internalType": "bytes", "name": "value", "type": "bytes" },
+            { "internalType": "uint256", "name": "power", "type": "uint256" },
+            { "internalType": "uint256", "name": "aggregateTimestamp", "type": "uint256" },
+            { "internalType": "uint256", "name": "attestationTimestamp", "type": "uint256" },
+            { "internalType": "uint256", "name": "relayTimestamp", "type": "uint256" }
+          ],
+          "internalType": "struct DataBankPlayground.AggregateData",
+          "name": "_aggregateData",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            { "internalType": "bytes32", "name": "queryId", "type": "bytes32" },
+            {
+              "components": [
+                { "internalType": "bytes", "name": "value", "type": "bytes" },
+                { "internalType": "uint256", "name": "timestamp", "type": "uint256" },
+                { "internalType": "uint256", "name": "aggregatePower", "type": "uint256" },
+                { "internalType": "uint256", "name": "previousTimestamp", "type": "uint256" },
+                { "internalType": "uint256", "name": "nextTimestamp", "type": "uint256" },
+                { "internalType": "uint256", "name": "lastConsensusTimestamp", "type": "uint256" }
+              ],
+              "internalType": "struct ReportData",
+              "name": "report",
+              "type": "tuple"
+            },
+            { "internalType": "uint256", "name": "attestationTimestamp", "type": "uint256" }
+          ],
+          "internalType": "struct OracleAttestationData",
+          "name": "_attestData",
+          "type": "tuple"
+        },
+        { "components": [ { "internalType": "address", "name": "addr", "type": "address" }, { "internalType": "uint256", "name": "power", "type": "uint256" } ], "internalType": "struct Validator[]", "name": "", "type": "tuple[]" },
+        { "components": [ { "internalType": "uint8", "name": "v", "type": "uint8" }, { "internalType": "bytes32", "name": "r", "type": "bytes32" }, { "internalType": "bytes32", "name": "s", "type": "bytes32" } ], "internalType": "struct Signature[]", "name": "", "type": "tuple[]" }
+      ],
+      "name": "updateOracleData",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [ { "internalType": "bytes32", "name": "_queryId", "type": "bytes32" }, { "internalType": "bytes", "name": "_value", "type": "bytes" } ],
+      "name": "updateOracleDataPlayground",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+}
+
+

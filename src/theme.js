@@ -1,0 +1,72 @@
+export const themes = {
+  light: {
+    name: 'LIGHT',
+    bg: '#f5f5f0',
+    cardBg: '#ffffff',
+    cardAlt: '#e8f5e9',
+    accent: '#2a6f3f',
+    accentDim: '#1f5530',
+    text: '#1a1a1a',
+    textDim: '#666666',
+    border: '#2a6f3f',
+    highlight: '#e8f5e9',
+    grey: '#cccccc',
+    success: '#22c55e',
+    warning: '#f59e0b',
+    error: '#ef4444',
+    glow: 'rgba(42, 111, 63, 0.3)'
+  },
+  alien: {
+    name: 'ALIEN',
+    bg: '#0f1419',
+    cardBg: '#1a1f2e',
+    cardAlt: '#2a3441',
+    accent: '#39ff14',
+    accentDim: '#2db80f',
+    text: '#e6fffa',
+    textDim: '#8fb9aa',
+    border: '#39ff14',
+    highlight: '#1a2b23',
+    grey: '#4a5568',
+    success: '#22c55e',
+    warning: '#f59e0b',
+    error: '#ef4444',
+    glow: 'rgba(57, 255, 20, 0.4)'
+  },
+  amber: {
+    name: 'AMBER',
+    bg: '#1a1610',
+    cardBg: '#2d2418',
+    cardAlt: '#3d3222',
+    accent: '#fbbf24',
+    accentDim: '#d97706',
+    text: '#fef3c7',
+    textDim: '#d6b83d',
+    border: '#fbbf24',
+    highlight: '#2d2418',
+    grey: '#4a5568',
+    success: '#22c55e',
+    warning: '#f59e0b',
+    error: '#ef4444',
+    glow: 'rgba(251, 191, 36, 0.4)'
+  },
+  cyan: {
+    name: 'CYAN',
+    bg: '#0c1720',
+    cardBg: '#1e293b',
+    cardAlt: '#334155',
+    accent: '#06b6d4',
+    accentDim: '#0891b2',
+    text: '#e0f2fe',
+    textDim: '#7dd3fc',
+    border: '#06b6d4',
+    highlight: '#164e63',
+    grey: '#4a5568',
+    success: '#22c55e',
+    warning: '#f59e0b',
+    error: '#ef4444',
+    glow: 'rgba(6, 182, 212, 0.4)'
+  }
+}
+
+export const defaultTheme = 'light'
